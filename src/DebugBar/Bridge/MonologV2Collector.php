@@ -19,12 +19,12 @@ namespace DebugBar\Bridge;
  * $debugbar->addCollector(new MonologCollector($logger));
  * </code>
  */
-class MonologCollector extends AbstractMonologCollector
+class MonologV2Collector extends AbstractMonologCollector
 {
     /**
      * @param array $record
      */
-    protected function write(array $record)
+    protected function write(array $record): void
     {
         $this->records[] = array(
             'message' => $record['formatted'],
